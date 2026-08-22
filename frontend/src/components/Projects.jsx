@@ -4,102 +4,74 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
-import careerquillImg from "../assets/careerquill.png";
-import flowmindImg from "../assets/flowmind.png";
-import proctorlyImg from "../assets/proctorly.png";
-import hiremeImg from "../assets/hireme.png";
+import nexhireImg from "../assets/nexhire.png"
+import clovoImg from "../assets/clovo.png"
+import hostellinkImg from "../assets/hostellink.png"
 
 const projects = [
   {
-    title: "CareerQuill",
-    subtitle: "Resume Generation & ATS Scoring Platform",
+    title: "Clovo",
+    subtitle: "MERN E-Commerce Platform",
     description:
-      "End-to-end resume builder with ATS scoring using NLP to match resumes against job descriptions and suggest keywords.",
+      "Built a full-stack e-commerce platform with customer/admin applications for products, cart, wishlist, and orders.",
     highlights: [
-      "6 resume templates (PDF & DOCX)",
-      "NLP-based ATS scoring",
-      "JWT auth & resume versioning",
+      "JWT and OAuth 2.0 auth",
+      "Stripe/Razorpay payments",
+      "PWA support",
     ],
     tech: [
       "React",
-      "Tailwind",
+      "Tailwind CSS",
+      "Vite",
       "Node.js",
-      "Express",
+      "Express.js",
       "MongoDB",
-      "Python",
-      "FastAPI",
-      "spaCy",
-      "scikit-learn",
+      "Cloudinary",
     ],
-    github: "https://github.com/adityarajsrv/CareerQuill",
-    live: "https://career-quill-umber.vercel.app/",
-    image: careerquillImg,
+    github: "https://github.com/assistaditya027",
+    live: "https://clovo-psi.vercel.app/",
+    image: clovoImg,
     accent: "from-[#27CBCB]/40",
   },
   {
-    title: "FlowMind-AI",
-    subtitle: "No-Code AI Workflow Builder",
+    title: "HostelLink",
+    subtitle: "Multi-Tenant Hostel Management SaaS",
     description:
-      "Visual platform to design and execute AI workflows using drag-and-drop nodes, document retrieval, and LLM orchestration.",
+      "Built a multi-tenant hostel platform with role-based access for Super Admin, Admin, Warden, and Student.",
     highlights: [
-      "Visual workflow editor",
-      "Semantic search (90%+ accuracy)",
-      "Tiered access & orchestration",
+      "JWT auth & data isolation",
+      "Visitor/gate-pass management",
+      "Razorpay payments",
     ],
     tech: [
       "React",
-      "React Flow",
-      "FastAPI",
-      "PostgreSQL",
-      "MongoDB",
-      "ChromaDB",
-      "Gemini LLM",
-      "Docker",
-    ],
-    github: "https://github.com/adityarajsrv/FlowMind-AI",
-    live: "https://flow-mind-ai-tan.vercel.app",
-    image: flowmindImg,
-    accent: "from-violet-400/40",
-  },
-  {
-    title: "Proctorly",
-    subtitle: "Real-Time Video Proctoring System",
-    description:
-      "Web-based proctoring system monitoring video, audio, and object detection to generate session integrity reports.",
-    highlights: [
-      "Face & object detection",
-      "Real-time event logging",
-      "PDF integrity reports",
-    ],
-    tech: [
-      "React",
-      "Tailwind",
-      "MediaPipe",
-      "TensorFlow.js",
       "Node.js",
+      "Express",
       "MongoDB",
-      "jsPDF",
     ],
-    github: "https://github.com/adityarajsrv/Proctorly",
-    live: "https://proctorly-kappa.vercel.app",
-    image: proctorlyImg,
-    accent: "from-amber-400/40",
-  },
+    github: "https://github.com/assistaditya027",
+    live: "https://hostel-link-beta.vercel.app/",
+    image: hostellinkImg,
+    accent: "from-violet-400/40",
+  },  
   {
-    title: "HireMe",
-    subtitle: "MERN Recruitment Platform Prototype",
+    title: "NexHire",
+    subtitle: "Full Stack Job Portal",
     description:
-      "Full-stack recruitment platform with secure authentication, profile management, and role-based access.",
+      "Built a full-stack job portal with public browsing and role-based workflows for Job Seekers, Employers, and Admins.",
     highlights: [
-      "JWT auth & RBAC",
-      "Profile completion tracking",
-      "Cloudinary uploads",
+      "Job search & applications",
+      "Applicant tracking",
+      "AI-assisted architecture",
     ],
-    tech: ["React", "Node.js", "Express", "MongoDB", "JWT", "Cloudinary"],
-    github: "https://github.com/adityarajsrv/HireMe",
-    live: "https://hire-me-inky.vercel.app",
-    image: hiremeImg,
-    accent: "from-cyan-400/40",
+    tech: [
+      "Angular",
+      "ASP.NET Core",
+    ],
+    github: "https://github.com/assistaditya027",
+    live: "https://nexhire-xi.vercel.app/",
+    image: nexhireImg,
+    accent: "from-amber-400/40",
   },
 ];
 
@@ -229,7 +201,7 @@ const Projects = () => {
 
       <div className="flex justify-center text-[#27CBCB]">
         <a
-          href="https://github.com/adityarajsrv"
+          href="https://github.com/assistaditya027"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 group"

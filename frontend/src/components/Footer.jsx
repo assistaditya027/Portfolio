@@ -31,7 +31,7 @@ const Footer = () => {
           </motion.div>
           <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-6 text-sm">
             <a
-              href="https://github.com/adityarajsrv"
+              href="https://github.com/aditya123fx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-gray-300 transition-colors"

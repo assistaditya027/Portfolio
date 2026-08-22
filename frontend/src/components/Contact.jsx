@@ -87,7 +87,7 @@ const Contact = () => {
           <div className="mt-10 space-y-4">
             <motion.a
               whileHover={{ x: 6 }}
-              href="https://github.com/adityarajsrv"
+              href="https://github.com/assistaditya027"
               target="_blank"
               className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm"
             >
@@ -101,7 +101,7 @@ const Contact = () => {
 
             <motion.a
               whileHover={{ x: 6 }}
-              href="https://linkedin.com/in/adityarajsrv"
+              href="https://www.linkedin.com/in/aditya-kumar-94b65b315"
               target="_blank"
               className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm"
             >
@@ -112,25 +112,7 @@ const Contact = () => {
               </div>
               <ExternalLink className="ml-auto opacity-60" />
             </motion.a>
-            <motion.a
-              whileHover={{ x: 6 }}
-              href="https://contra.com/aditya_raj_srivastava_vgiys102?referralExperimentNid=DEFAULT_REFERRAL_PROGRAM&referrerUsername=aditya_raj_srivastava_vgiys102"
-              target="_blank"
-              className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm"
-            >
-              <div className="w-10 h-10 rounded-lg bg-white text-black flex items-center justify-center font-bold">
-                C
-              </div>
 
-              <div>
-                <p className="font-medium text-gray-200">Contra</p>
-                <p className="text-sm text-gray-400">
-                  Hire me for freelance projects
-                </p>
-              </div>
-
-              <ExternalLink className="ml-auto opacity-60" />
-            </motion.a>
           </div>
         </motion.div>
 

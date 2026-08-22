@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProfileCard from "./ui/ProfileCard";
 import profileImg from "../assets/profile.png";
-import profile from "../assets/passport_size.jpg";
+import profile from "../assets/passport_size.jpeg";
 import { X, Download, ExternalLink } from "lucide-react";
 
 const container = {
@@ -29,7 +29,7 @@ const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/Resume.pdf";
-    link.download = "Aditya_Raj_Srivastava_Resume.pdf";
+    link.download = "Aditya_Kumar_Resume.pdf";
     link.click();
   };
 
@@ -49,9 +49,9 @@ const About = () => {
           className="w-full max-w-md lg:max-w-none"
         >
           <ProfileCard
-            name="Aditya Raj Srivastava"
+            name="Aditya Kumar"
             title="Full-Stack Developer"
-            handle="adityarajsrv"
+            handle="aditya-kumar"
             status="Final Year Student"
             contactText="Let's Connect"
             miniAvatarUrl={profile}
@@ -73,15 +73,15 @@ const About = () => {
             viewport={{ once: true, amount: 0.4 }}
             className="text-3xl sm:text-4xl font-semibold leading-tight text-center lg:text-left"
           >
-            A developer who{" "}
+            A developer driven by{" "}
             <span className="text-transparent bg-clip-text bg-linear-to-r from-[#27CBCB] to-[#26D868]">
-              cares about the details
+              real-world impact
             </span>
           </motion.h2>
           <motion.div variants={fadeUp} className="relative pl-6">
             <div className="absolute left-0 top-2 w-1 h-20 bg-linear-to-b from-[#27CBCB] to-[#26D868] rounded-full" />
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Final year Computer Science student with a solid foundation in
+              Final year Computer Science student at Vivekananda Global University with a solid foundation in
               software development, committed to creating{" "}
               <span className="text-[#27CBCB]">scalable and reliable</span>{" "}
               full-stack applications.
@@ -92,11 +92,8 @@ const About = () => {
             className="bg-linear-to-br from-gray-900/50 to-transparent p-4 sm:p-5 rounded-xl border border-gray-800/50"
           >
             <p className="text-[#80978F] text-sm sm:text-base leading-relaxed italic">
-              &quot;Curiosity drives how I approach technology - from solving
-              coding problems to developing{" "}
-              <span className="text-gray-300">intuitive, useful software</span>.
-              I enjoy transforming abstract ideas into tangible, usable
-              solutions.&quot;
+              &quot;My focus is on creating responsive user interfaces and reliable backend systems that provide practical solutions to everyday problems. Through my internship and projects, I&apos;ve learned to take ideas from concept to{" "}
+              <span className="text-gray-300">production-ready applications</span>.&quot;
             </p>
           </motion.div>
           <motion.div
@@ -111,10 +108,10 @@ const About = () => {
             </motion.h3>
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
               {[
-                "Software Development",
-                "Web Technologies",
-                "AI & Automation",
-                "Problem-Solving",
+                "Full-Stack Dev",
+                "MERN Stack",
+                "AI Engineering",
+                "SaaS Platforms",
               ].map((item, i) => (
                 <motion.div
                   key={item}

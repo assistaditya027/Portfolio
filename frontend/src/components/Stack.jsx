@@ -7,56 +7,53 @@ import {
   FaGitAlt,
   FaHtml5,
   FaCss3,
-  FaPython,
   FaJava,
+  FaDocker,
+  FaGithub,
 } from "react-icons/fa";
 import {
-  SiTypescript,
   SiTailwindcss,
   SiExpress,
   SiMongodb,
-  SiMysql,
-  SiVercel,
-  SiRender,
-  SiFastapi,
+  SiRedux,
+  SiVite,
+  SiPostman,
+  SiCloudinary,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
-import { MdSecurity } from "react-icons/md";
 import { RiJavascriptFill } from "react-icons/ri";
-import { FaAws } from "react-icons/fa6";
 
 const categories = {
-  frontend: [
-    { name: "HTML", icon: <FaHtml5 /> },
-    { name: "CSS", icon: <FaCss3 /> },
+  languages: [
     { name: "JavaScript", icon: <RiJavascriptFill /> },
-    { name: "React", icon: <FaReact /> },
-    { name: "Tailwind", icon: <SiTailwindcss /> },
+    { name: "Java", icon: <FaJava /> },
+    { name: "HTML5", icon: <FaHtml5 /> },
+    { name: "CSS3", icon: <FaCss3 /> },
+  ],
+  frontend: [
+    { name: "React.js", icon: <FaReact /> },
+    { name: "Redux Toolkit", icon: <SiRedux /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    { name: "Vite", icon: <SiVite /> },
   ],
   backend: [
     { name: "Node.js", icon: <FaNodeJs /> },
-    { name: "Express", icon: <SiExpress /> },
+    { name: "Express.js", icon: <SiExpress /> },
     { name: "REST APIs", icon: <TbApi /> },
-    { name: "JWT Auth", icon: <MdSecurity /> },
-    { name: "FastAPI", icon: <SiFastapi /> },
   ],
   database: [
     { name: "MongoDB", icon: <SiMongodb /> },
-    { name: "MySQL", icon: <SiMysql /> },
   ],
-  devops: [
-    { name: "GitHub", icon: <FaGitAlt /> },
-    { name: "Vercel", icon: <SiVercel /> },
-    { name: "Render", icon: <SiRender /> },
-    { name: "AWS", icon: <FaAws /> },
+  tools: [
+    { name: "Git", icon: <FaGitAlt /> },
+    { name: "GitHub", icon: <FaGithub /> },
+    { name: "Docker", icon: <FaDocker /> },
+    { name: "Postman", icon: <SiPostman /> },
+    { name: "Cloudinary", icon: <SiCloudinary /> },
   ],
 };
 
-const others = [
-  { name: "Python", icon: <FaPython /> },
-  { name: "TypeScript", icon: <SiTypescript /> },
-  { name: "Java", icon: <FaJava /> },
-];
+const others = [];
 
 const tabs = ["all", ...Object.keys(categories)];
 
@@ -166,25 +163,27 @@ const Stack = () => {
           ))}
         </motion.div>
       )}
-      <div className="space-y-3 sm:space-y-4">
-        <p className="font-mono text-sm sm:text-md text-gray-500 text-center lg:text-left">
-          {"// Also comfortable with:"}
-        </p>
-        <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
-          {others.map((tech) => (
-            <motion.div
-              key={tech.name}
-              whileHover={{ y: -4 }}
-              className="flex items-center gap-2 px-3 sm:px-4 py-2
-          rounded-lg border border-gray-700/40
-          bg-gray-900/30 backdrop-blur cursor-pointer"
-            >
-              <span className="text-lg text-gray-400">{tech.icon}</span>
-              <span className="text-sm text-gray-300">{tech.name}</span>
-            </motion.div>
-          ))}
+      {others.length > 0 && (
+        <div className="space-y-3 sm:space-y-4">
+          <p className="font-mono text-sm sm:text-md text-gray-500 text-center lg:text-left">
+            {"// Also comfortable with:"}
+          </p>
+          <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center lg:justify-start">
+            {others.map((tech) => (
+              <motion.div
+                key={tech.name}
+                whileHover={{ y: -4 }}
+                className="flex items-center gap-2 px-3 sm:px-4 py-2
+            rounded-lg border border-gray-700/40
+            bg-gray-900/30 backdrop-blur cursor-pointer"
+              >
+                <span className="text-lg text-gray-400">{tech.icon}</span>
+                <span className="text-sm text-gray-300">{tech.name}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </motion.section>
   );
 };

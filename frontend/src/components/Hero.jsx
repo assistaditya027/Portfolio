@@ -21,7 +21,7 @@ const Hero = () => {
     >
       <p className="text-sm md:text-base lg:text-lg text-gray-400 font-mono">
         <span className="text-[#27CBCB]">const</span> developer ={" "}
-        <span className="text-gray-300">&quot;Aditya Raj Srivastava&quot;</span>
+        <span className="text-gray-300">&quot;Aditya Kumar&quot;</span>
         ;
       </p>
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
@@ -30,10 +30,10 @@ const Hero = () => {
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#80978F] leading-tight">
         <TextType
           text={[
-            "Building things that just work.",
-            "Keeping the code clean.",
-            "Solving problems properly.",
-            "Shipping without the drama.",
+            "Building responsive user experiences.",
+            "Developing reliable backend systems.",
+            "Creating practical web solutions.",
+            "Passionate about the MERN stack.",
           ]}
           typingSpeed={75}
           pauseDuration={1500}
@@ -44,9 +44,8 @@ const Hero = () => {
         />
       </h2>
       <p className="text-[#80978F] text-base md:text-lg lg:text-xl mt-2 lg:mt-3 w-full lg:w-[60%]">
-        I build end-to-end web applications, connecting intuitive frontends with
-        scalable backend systems focused on clean architecture, performance, and
-        production-ready results.
+        I am a Full Stack Developer with hands-on experience building real-world web applications. 
+        I focus on connecting intuitive frontends with reliable backend systems to solve real application needs.
       </p>
       <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-5 mt-3">
         <button
