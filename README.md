@@ -1,167 +1,80 @@
-# 🚀 Full Stack Developer Portfolio
+<div align="center">
+  <img src="https://raw.githubusercontent.com/assistaditya027/Portfolio/main/frontend/public/preview.png" alt="Aditya Kumar Portfolio" width="800" />
+</div>
 
-A sleek, responsive portfolio website showcasing projects, skills, and contact information with modern animations and interactive UI elements.
+<h1 align="center">Aditya Kumar | Full-Stack Developer</h1>
+
+<p align="center">
+  A premium, high-performance personal portfolio built with React, Tailwind CSS, GSAP, and Node.js.
+  <br />
+  <a href="https://aditya-portfolio-alpha-three.vercel.app/"><strong>View Live Website »</strong></a>
+</p>
+
+---
 
 ## ✨ Features
 
-- **Responsive Design** - Fully responsive across all device sizes
-- **Modern UI/UX** - Clean, professional design with subtle animations
-- **Interactive Components** - Dynamic typing effects, animated cards, smooth scrolling
-- **Project Showcase** - Featured projects with detailed descriptions
-- **Tech Stack Display** - Organized technology skills by category
-- **Loading Screen** - Elegant loading animation with progress indicator
-- **Contact Section** - Easy email copy and social media links
+- **Modern SaaS Aesthetics:** Custom glassmorphism components, dynamic gradients (Violet/Blue theme), and sleek typography using `Outfit`.
+- **High-Performance Animations:** Complex scroll-linked animations and a custom animated pre-loader powered by **Framer Motion** and **GSAP**.
+- **Responsive Layout:** 100% mobile-friendly with a custom off-canvas mobile navigation menu.
+- **Backend Integrated Contact Form:** Fully functional contact form built with Node.js and the Resend Email API.
+- **SEO Optimized:** Comprehensive Open Graph (OG) and Twitter meta tags for rich social media sharing.
 
 ## 🛠️ Tech Stack
 
-- **React** - Frontend framework
-- **Tailwind CSS** - Styling and responsive design
-- **Framer Motion** - Smooth animations and transitions
-- **GSAP** - Advanced animations for loading screen
-- **Lucide React & React Icons** - Icon library
-- **Vite** - Fast build tool and development server
+### Frontend
+- **Framework:** React 18, Vite
+- **Styling:** Tailwind CSS v4, Custom CSS (Glassmorphism)
+- **Animations:** Framer Motion, GSAP
+- **Icons:** Lucide React, React Icons
+- **Fonts:** Outfit (Google Fonts), JetBrains Mono
 
-## 📁 Project Structure
+### Backend
+- **Runtime:** Node.js, Express.js
+- **Email Service:** Resend API
+- **Security:** CORS
 
-```
-PORTFOLIO/
-│
-├── frontend/
-│   ├── node_modules/                    # Project dependencies
-│   ├── public/                          # Static assets
-│   │   ├── Resume.pdf                   # Resume PDF file
-│   │   ├── vite.svg                     # Vite logo
-│   │   └── index.html                   # Main HTML file
-│   │
-│   └── src/
-│       ├── assets/                      # Images and media files
-│       │   ├── careerquill.png          # Project screenshot
-│       │   ├── flowmind.png             # Project screenshot
-│       │   ├── proctorly.png            # Project screenshot
-│       │   ├── hireme.png               # Project screenshot
-│       │   ├── profile.png              # Profile image
-│       │   └── passport_size.jpg        # Small profile image
-│       │
-│       ├── components/                  # React components
-│       │   ├── ui/                      # Reusable UI components
-│       │   │   ├── ProfileCard.css      # Profile card styles
-│       │   │   ├── BackgroundCard.css   # Background card styles
-│       │   │   ├── ProfileCard.jsx      # Profile card component
-│       │   │   └── TextType.jsx         # Typing animation component
-│       │   │
-│       │   ├── About.jsx                # About section component
-│       │   ├── Contact.jsx              # Contact section component
-│       │   ├── Footer.jsx               # Footer component
-│       │   ├── Hero.jsx                 # Hero section component
-│       │   ├── LoadingScreen.jsx        # Loading screen component
-│       │   ├── Navbar.jsx               # Navigation bar component
-│       │   ├── Projects.jsx             # Projects section component
-│       │   └── Stack.jsx                # Tech stack section component
-│       │
-│       ├── pages/                       # Page components
-│       │   └── Portfolio.jsx            # Main portfolio page
-│       │
-│       ├── App.css                      # Global application styles
-│       ├── App.jsx                      # Main App component
-│       ├── index.css                    # Base styles and Tailwind imports
-│       └── main.jsx                     # Application entry point
-│
-├── .gitignore                           # Git ignore file
-├── .eslintrc.json                       # ESLint configuration
-├── index.html                           # Root HTML file (Vite default)
-├── package-lock.json                    # NPM lock file
-├── package.json                         # Project dependencies and scripts
-├── README.md                            # Project documentation
-├── vite.config.js                       # Vite configuration
-└── .env                                 # Environment variables (optional)
-```
-
-## 🚀 Getting Started
+## 🚀 Getting Started (Local Development)
 
 ### Prerequisites
-- Node.js (v18 or higher)
+- Node.js (v18+)
 - npm or yarn
 
-### Installation
-
-1. Clone the repository:
+### 1. Frontend Setup
+Navigate to the frontend directory and install dependencies:
 ```bash
-git clone https://github.com/adityarajsrv/portfolio.git
-cd portfolio/frontend
-```
-
-2. Install dependencies:
-```bash
+cd frontend
 npm install
-# or
-yarn install
-```
-
-3. Start the development server:
-```bash
 npm run dev
-# or
-yarn dev
 ```
+The frontend will run on `http://localhost:5173`.
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
-
-### Build for Production
+### 2. Backend Setup
+Navigate to the backend directory:
 ```bash
-npm run build
-# or
-yarn build
+cd backend
+npm install
 ```
+Create a `.env` file in the backend folder and add your Resend API Key:
+```env
+RESEND_API_KEY=your_resend_api_key_here
+PORT=5000
+```
+Start the backend server:
+```bash
+node server.js
+```
+The backend will run on `http://localhost:5000`.
 
-## 🎨 Components
+## 🌐 Deployment
 
-- **Navbar** - Responsive navigation with mobile menu
-- **Hero** - Animated introduction with typing effect
-- **About** - Personal info with resume viewer
-- **Stack** - Interactive tech stack display with filtering
-- **Projects** - Project cards with expandable tech details
-- **Contact** - Email copy functionality and social links
-- **Background** - Animated gradient background
-- **LoadingScreen** - Custom loading animation
+- **Frontend:** Hosted on [Vercel](https://vercel.com/) (configured with `vercel.json` for SPA routing).
+- **Backend:** Hosted on [Render](https://render.com/) or similar Node.js hosting platform.
 
-## 📱 Responsive Breakpoints
+## 📫 Contact
 
-- Mobile: < 640px
-- Tablet: 640px - 1024px
-- Desktop: 1024px - 1280px
-- Large Desktop: > 1280px
-
-## 🎯 Key Features
-
-- **Smooth Scrolling** - Navigation with scroll offset for fixed navbar
-- **Section Observers** - Active navigation highlighting
-- **Mobile-Friendly** - Hamburger menu and optimized layouts
-- **Performance** - Optimized images and lazy loading
-- **Accessibility** - Semantic HTML and ARIA labels
-
-## 🔧 Customization
-
-1. Update personal information in respective components
-2. Replace images in `/src/assets/`
-3. Modify colors in Tailwind configuration
-4. Update project data in `Projects.jsx` and `Stack.jsx`
-
-## 📄 License
-
-This is a personal project for development and portfolio purposes.
+- **LinkedIn:** [aditya-kumar-94b65b315](https://www.linkedin.com/in/aditya-kumar-94b65b315)
+- **GitHub:** [@assistaditya027](https://github.com/assistaditya027)
 
 ---
-
-## ⭐ Support the Project
-
-If you find this project helpful or interesting, please consider giving it a star on GitHub! Your support helps me continue to improve and maintain the project.
-
----
-
-## 👨‍💻 Author
-
-**Aditya Raj Srivastava**
-- GitHub: [@adityarajsrv](https://github.com/adityarajsrv)
-- LinkedIn: [Aditya Raj Srivastava](https://www.linkedin.com/in/adityarajsrv)
-
----
+<p align="center">Built with ❤️ by Aditya Kumar.</p>
