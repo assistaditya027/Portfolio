@@ -77,22 +77,22 @@ const Navbar = () => {
     <>
       <nav
         className={`fixed top-0 left-0 w-full z-50 h-20
-          px-4 sm:px-8 md:px-15 flex justify-between items-center font-mono
+          px-4 sm:px-8 md:px-15 flex justify-between items-center
           transition-all duration-300 ease-out
           ${hidden ? "-translate-y-full" : "translate-y-0"}
           ${
             scrolled
-              ? "bg-[#101318]/80 backdrop-blur border-b border-[#8B5CF6]/20 shadow-[0_8px_30px_rgba(39,203,203,0.15)]"
+              ? "bg-[#101318]/80 backdrop-blur-md border-b border-[#8B5CF6]/20 shadow-[0_8px_30px_rgba(139,92,246,0.15)]"
               : "bg-transparent"
           }
         `}
       >
         <a href="#top" onClick={scrollToTop}>
-          <h1 className="text-xl sm:text-2xl font-bold cursor-pointer text-gray-400 hover:text-[#8B5CF6] transition-colors">
-            <pre className="text-base sm:text-lg md:text-xl">&lt;/aditya&gt;</pre>
+          <h1 className="text-xl sm:text-2xl font-bold cursor-pointer hover:scale-105 transition-transform duration-300">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400 tracking-tight">&lt;Aditya/&gt;</span>
           </h1>
         </a>
-        <div className="hidden md:flex items-center space-x-5 text-lg">
+        <div className="hidden md:flex items-center space-x-6 text-[15px] font-semibold tracking-wide capitalize">
           {sections.map((item) => {
             const isActive = active === item;
 
@@ -101,17 +101,17 @@ const Navbar = () => {
                 key={item}
                 href={`#${item}`}
                 onClick={(e) => scrollToSection(item, e)}
-                className={`relative px-2 py-1 rounded-md transition-all duration-200
+                className={`relative px-2 py-1 rounded-md transition-all duration-300 hover:-translate-y-0.5
                   ${
                     isActive
-                      ? "text-[#8B5CF6]"
-                      : "text-gray-400 hover:text-[#8B5CF6]"
+                      ? "text-[#C084FC] drop-shadow-[0_0_8px_rgba(192,132,252,0.5)]"
+                      : "text-gray-300 hover:text-[#C084FC]"
                   }
                 `}
               >
-                /{item}
+                {item}
                 <span
-                  className={`absolute left-0 -bottom-1 h-0.5 bg-[#8B5CF6]
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-[#C084FC] rounded-full
                     transition-all duration-300
                     ${isActive ? "w-full" : "w-0"}
                   `}
@@ -151,17 +151,17 @@ const Navbar = () => {
                 key={item}
                 href={`#${item}`}
                 onClick={(e) => scrollToSection(item, e)}
-                className={`text-2xl font-mono transition-all duration-300
+                className={`text-2xl font-semibold capitalize transition-all duration-300
                   ${
                     isActive
-                      ? "text-[#8B5CF6] scale-110"
-                      : "text-gray-400 hover:text-[#8B5CF6] hover:scale-105"
+                      ? "text-[#C084FC] scale-110 drop-shadow-[0_0_10px_rgba(192,132,252,0.5)]"
+                      : "text-gray-300 hover:text-[#C084FC] hover:scale-105"
                   }
                 `}
               >
-                /{item}
+                {item}
                 {isActive && (
-                  <span className="block mt-1 mx-auto w-1/2 h-0.5 bg-[#8B5CF6] rounded-full"></span>
+                  <span className="block mt-1.5 mx-auto w-1/2 h-[2px] bg-[#C084FC] rounded-full"></span>
                 )}
               </a>
             );
