@@ -65,17 +65,19 @@ const LoadingScreen = ({ onComplete }) => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-9999 w-screen h-screen text-black">
+    <div className="fixed inset-0 z-9999 w-screen h-screen text-black font-sans">
       <div className="h-full w-full bg-[#101318] flex justify-center items-center">
-        <div className="follow absolute bg-[#25c5c5] h-0.5 w-0 left-0 top-1/2 -translate-y-1/2 z-20"></div>
+        <div className="follow absolute bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] h-[3px] w-0 left-0 top-1/2 -translate-y-1/2 z-20 shadow-[0_0_20px_rgba(139,92,246,0.6)]"></div>
         <div className="sweep absolute inset-0 bg-[#101318] translate-x-full z-30"></div>
         <div
-          className="hide absolute left-0 bg-white h-0.5 top-1/2 -translate-y-1/2"
+          className="hide absolute left-0 bg-gray-800 h-[3px] top-1/2 -translate-y-1/2"
           style={{ width: `${counter}%` }}
         ></div>
-        <p className="hide absolute text-white text-4xl sm:text-6xl md:text-8xl font-medium -translate-y-4">
-          {counter}%
-        </p>
+        <div className="hide flex flex-col items-center justify-center -translate-y-8 z-10">
+          <p className="text-white text-5xl sm:text-7xl md:text-8xl font-bold tracking-tighter drop-shadow-xl">
+            {counter}<span className="text-[#8B5CF6] text-3xl sm:text-5xl md:text-6xl font-medium ml-1">%</span>
+          </p>
+        </div>
       </div>
       <div className="content fixed inset-y-0 left-0 w-0 bg-[#101318] z-10 overflow-hidden">
         <div className="portfolio-content opacity-0 h-full"></div>
