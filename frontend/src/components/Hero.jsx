@@ -30,10 +30,10 @@ const Hero = () => {
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#94A3B8] leading-tight">
         <TextType
           text={[
-            "Building responsive user experiences.",
-            "Developing reliable backend systems.",
-            "Creating practical web solutions.",
-            "Passionate about the MERN stack.",
+            "Building modern web apps.",
+            "Developing robust backends.",
+            "Creating practical solutions.",
+            "Mastering the MERN stack.",
           ]}
           typingSpeed={75}
           pauseDuration={1500}

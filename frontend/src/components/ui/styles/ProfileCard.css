@@ -411,10 +411,11 @@
 }
 
 .pc-details h3 {
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: 0.5px;
   margin: 0;
   font-size: min(5svh, 3em);
-  background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 50%, #94A3B8 100%);
+  background: linear-gradient(135deg, #C084FC 0%, #60A5FA 50%, #F8FAFC 100%);
   background-size: 200% 200%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -424,20 +425,19 @@
 }
 
 .pc-details p {
-  font-weight: 600;
+  font-weight: bold;
   position: relative;
   top: -15px;
   white-space: nowrap;
   font-size: 20px;
   margin: 0 auto;
   width: min-content;
-  background: linear-gradient(to right, #8B5CF6, #94A3B8);
+  background: linear-gradient(to right, #60A5FA, #C084FC);
   background-size: 100% 100%;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
 }
 
 .pc-meta {
