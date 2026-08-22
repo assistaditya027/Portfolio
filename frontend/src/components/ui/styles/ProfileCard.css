@@ -351,7 +351,7 @@
 
 .pc-handle {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   color: #8B5CF6;
   line-height: 1;
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
@@ -359,6 +359,7 @@
 
 .pc-status {
   font-size: 14px;
+  font-weight: bold;
   color: rgba(128, 151, 143, 0.9);
   line-height: 1;
   font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
@@ -369,7 +370,7 @@
   border-radius: 8px;
   padding: 10px 12px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: bold;
   color: #3B82F6; 
   cursor: pointer;
   transition: all 0.2s ease;
@@ -441,6 +442,7 @@
 
 .pc-meta {
   font-size: 0.75rem;
+  font-weight: bold;
   color: rgba(200, 200, 200, 0.6);
   font-family: monospace;
 }
