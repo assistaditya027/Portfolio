@@ -62,15 +62,16 @@ const Stack = () => {
 
   const Capsule = ({ tech }) => (
     <motion.div
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -5, scale: 1.02 }}
       className="group flex items-center gap-3 px-4 sm:px-5 py-3
-        rounded-full border border-gray-700/40
-        bg-gray-900/40 backdrop-blur transition-all"
+        rounded-full border border-gray-700/40 hover:border-[#8B5CF6]/60
+        bg-gray-900/40 hover:bg-gradient-to-r hover:from-[#8B5CF6]/10 hover:to-[#3B82F6]/10 
+        backdrop-blur transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer"
     >
-      <span className="text-xl text-gray-400 group-hover:text-[#8B5CF6] transition-colors">
+      <span className="text-xl text-gray-400 group-hover:text-[#3B82F6] transition-colors duration-300">
         {tech.icon}
       </span>
-      <span className="text-sm sm:text-md font-medium text-gray-200">{tech.name}</span>
+      <span className="text-sm sm:text-md font-medium text-gray-200 group-hover:text-white transition-colors duration-300">{tech.name}</span>
     </motion.div>
   );
 
