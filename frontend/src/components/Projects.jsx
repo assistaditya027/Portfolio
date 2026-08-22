@@ -30,7 +30,7 @@ const projects = [
     github: "https://github.com/assistaditya027/Clovo",
     live: "https://clovo-psi.vercel.app/",
     image: clovoImg,
-    accent: "from-[#8B5CF6]/40",
+    accent: "from-purple-500/80",
   },
   {
     title: "HostelLink",
@@ -53,7 +53,7 @@ const projects = [
     github: "https://github.com/assistaditya027/HostelLink",
     live: "https://hostel-link-beta.vercel.app/",
     image: hostellinkImg,
-    accent: "from-violet-400/40",
+    accent: "from-blue-500/80",
   },  
   {
     title: "NexHire",
@@ -76,7 +76,7 @@ const projects = [
     github: "https://github.com/assistaditya027/NexHire",
     live: "https://nexhire-xi.vercel.app/",
     image: nexhireImg,
-    accent: "from-amber-400/40",
+    accent: "from-amber-500/80",
   },
 ];
 
@@ -104,11 +104,11 @@ const ProjectCard = ({ project }) => {
           initial={{ x: "-60%" }}
           whileHover={{ x: "60%" }}
           transition={{ duration: 1.2 }}
-          className={`absolute inset-0 bg-linear-to-r ${project.accent} to-transparent opacity-60`}
+          className={`absolute inset-0 bg-gradient-to-r ${project.accent} to-transparent opacity-90 mix-blend-overlay`}
         />
         <div className="absolute bottom-3 left-4">
-          <h3 className="text-base sm:text-lg font-semibold text-white">{project.title}</h3>
-          <p className="text-xs text-[#8B5CF6]">{project.subtitle}</p>
+          <h3 className="text-lg sm:text-xl font-bold text-white drop-shadow-md">{project.title}</h3>
+          <p className="text-sm font-semibold text-[#C084FC] drop-shadow-md">{project.subtitle}</p>
         </div>
       </div>
 
@@ -123,7 +123,7 @@ const ProjectCard = ({ project }) => {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-1 sm:gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
           {project.tech
             .slice(0, expanded ? project.tech.length : 4)
             .map((t) => (
@@ -131,7 +131,7 @@ const ProjectCard = ({ project }) => {
                 key={t}
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="px-2 py-1 text-xs rounded-md bg-gray-950 border border-gray-700/40 text-gray-400"
+                className="px-2.5 py-1 text-[11px] sm:text-xs font-semibold rounded-md bg-gray-800 border border-gray-600/60 text-gray-200 shadow-sm"
               >
                 {t}
               </motion.span>
@@ -139,7 +139,7 @@ const ProjectCard = ({ project }) => {
           {project.tech.length > 4 && (
             <button
               onClick={() => setExpanded(!expanded)}
-              className="px-2 py-1 text-xs rounded-md border border-gray-700/40 text-[#8B5CF6] hover:bg-[#8B5CF6]/10 transition-colors"
+              className="px-2.5 py-1 text-[11px] sm:text-xs font-bold rounded-md bg-[#C084FC]/20 border border-[#C084FC]/40 text-[#E9D5FF] hover:bg-[#C084FC]/30 transition-colors shadow-sm cursor-pointer"
             >
               {expanded ? "− less" : `+${project.tech.length - 4}`}
             </button>
