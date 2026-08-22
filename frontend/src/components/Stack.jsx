@@ -67,7 +67,7 @@ const Stack = () => {
         rounded-full border border-gray-700/40
         bg-gray-900/40 backdrop-blur transition-all"
     >
-      <span className="text-xl text-gray-400 group-hover:text-[#27CBCB] transition-colors">
+      <span className="text-xl text-gray-400 group-hover:text-[#8B5CF6] transition-colors">
         {tech.icon}
       </span>
       <span className="text-sm sm:text-md font-medium text-gray-200">{tech.name}</span>
@@ -84,22 +84,22 @@ const Stack = () => {
     >
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 lg:gap-0">
         <div className="max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#27CBCB] text-center lg:text-left">My Tech Stack</h2>
-          <p className="text-[#80978F] text-base sm:text-lg mt-2 text-center lg:text-left">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#8B5CF6] text-center lg:text-left">My Tech Stack</h2>
+          <p className="text-[#94A3B8] text-base sm:text-lg mt-2 text-center lg:text-left">
             The technologies I reach for most often - each chosen with purpose
           </p>
         </div>
         <div className="w-full lg:w-60 bg-gray-900/40 backdrop-blur-sm py-4 px-5 mr-35 rounded-xl border border-gray-700/40">
           <p className="text-gray-200 text-sm italic leading-relaxed mb-3">
-            &quot;Use boring tech. Build something that lasts.&quot;
+            &quot;First, solve the problem. Then, write the code.&quot;
           </p>
           <div className="flex items-center">
             <div className="flex-1">
               <span className="text-gray-400 text-xs font-medium">
-                ~ Dan McKinley
+                ~ John Johnson
               </span>
             </div>
-            <div className="w-2 h-2 rounded-full bg-[#27CBCB]"></div>
+            <div className="w-2 h-2 rounded-full bg-[#8B5CF6]"></div>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@ const Stack = () => {
             className={`relative px-3 sm:px-4 py-2 text-sm sm:text-md font-medium rounded-lg transition-all
               ${
                 active === key
-                  ? "text-white bg-[#27CBCB]/20"
+                  ? "text-white bg-[#8B5CF6]/20"
                   : "text-gray-400 hover:text-white"
               }`}
           >
@@ -119,7 +119,7 @@ const Stack = () => {
             {active === key && (
               <motion.span
                 layoutId="underline"
-                className="absolute left-0 bottom-0 h-1 w-full bg-[#27CBCB]"
+                className="absolute left-0 bottom-0 h-1 w-full bg-[#8B5CF6]"
               />
             )}
           </button>

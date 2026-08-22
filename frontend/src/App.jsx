@@ -19,7 +19,7 @@ const App = () => {
           onClick={() => {
             setIsLoading(false);
           }}
-          className="fixed top-6 right-6 z-10000 px-4 py-2 bg-gray-800/50 backdrop-blur-sm text-gray-400 text-sm rounded-lg border border-gray-700 hover:border-[#27CBCB] hover:text-[#27CBCB] transition-all duration-300"
+          className="fixed top-6 right-6 z-10000 px-4 py-2 bg-gray-800/50 backdrop-blur-sm text-gray-400 text-sm rounded-lg border border-gray-700 hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all duration-300"
         >
           Skip Intro
         </button>

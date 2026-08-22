@@ -17,28 +17,28 @@ const Portfolio = () => {
       </section>
       <section id="about" className="scroll-mt-10">
         <div className="flex flex-row items-center px-4 sm:px-6 lg:ml-50 mt-25 sm:mt-20 lg:mt-35 p-3 sm:p-5 space-x-3">
-          <p className="cursor-pointer text-[#27CBCB] text-sm sm:text-base">/about</p>
+          <p className="cursor-pointer text-[#8B5CF6] text-sm sm:text-base">/about</p>
           <div className="bg-gray-700 h-0.5 w-full lg:mr-30 rounded-lg" />
         </div>
         <About />
       </section>
       <section id="stack" className="scroll-mt-10">
         <div className="flex flex-row items-center px-4 sm:px-6 lg:ml-50 mt-12 sm:mt-16 lg:mt-20 p-3 sm:p-5 space-x-3">
-          <p className="cursor-pointer text-[#27CBCB] text-sm sm:text-base">/stack</p>
+          <p className="cursor-pointer text-[#8B5CF6] text-sm sm:text-base">/stack</p>
           <div className="bg-gray-700 h-0.5 w-full lg:mr-30 rounded-lg" />
         </div>
         <Stack />
       </section>
       <section id="projects" className="scroll-mt-10">
         <div className="flex flex-row items-center px-4 sm:px-6 lg:ml-50 mt-12 sm:mt-16 lg:mt-20 p-3 sm:p-5 space-x-3">
-          <p className="cursor-pointer text-[#27CBCB] text-sm sm:text-base">/projects</p>
+          <p className="cursor-pointer text-[#8B5CF6] text-sm sm:text-base">/projects</p>
           <div className="bg-gray-700 h-0.5 w-full lg:mr-30 rounded-lg" />
         </div>
         <Projects />
       </section>
       <section id="contact" className="scroll-mt-10">
         <div className="flex flex-row items-center px-4 sm:px-6 lg:ml-50 mt-12 sm:mt-16 lg:mt-20 p-3 sm:p-5 space-x-3">
-          <p className="cursor-pointer text-[#27CBCB] text-sm sm:text-base">/contact</p>
+          <p className="cursor-pointer text-[#8B5CF6] text-sm sm:text-base">/contact</p>
           <div className="bg-gray-700 h-0.5 w-full lg:mr-30 rounded-lg" />
         </div>
         <Contact />

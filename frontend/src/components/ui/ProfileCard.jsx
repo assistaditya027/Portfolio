@@ -37,7 +37,7 @@ const ProfileCardComponent = ({
   handle = "javicodes",
   status = "Online",
   contactText = "Contact",
-  linkedinUrl = "https://www.linkedin.com/in/adityarajsrv/",
+  linkedinUrl = "https://www.linkedin.com/in/aditya-kumar-94b65b315/",
   showUserInfo = true,
   onContactClick,
 }) => {

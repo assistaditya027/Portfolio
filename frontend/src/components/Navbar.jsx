@@ -82,13 +82,13 @@ const Navbar = () => {
           ${hidden ? "-translate-y-full" : "translate-y-0"}
           ${
             scrolled
-              ? "bg-[#101318]/80 backdrop-blur border-b border-[#27CBCB]/20 shadow-[0_8px_30px_rgba(39,203,203,0.15)]"
+              ? "bg-[#101318]/80 backdrop-blur border-b border-[#8B5CF6]/20 shadow-[0_8px_30px_rgba(39,203,203,0.15)]"
               : "bg-transparent"
           }
         `}
       >
         <a href="#top" onClick={scrollToTop}>
-          <h1 className="text-xl sm:text-2xl font-bold cursor-pointer text-gray-400 hover:text-[#27CBCB] transition-colors">
+          <h1 className="text-xl sm:text-2xl font-bold cursor-pointer text-gray-400 hover:text-[#8B5CF6] transition-colors">
             <pre className="text-base sm:text-lg md:text-xl">&lt;/aditya&gt;</pre>
           </h1>
         </a>
@@ -104,14 +104,14 @@ const Navbar = () => {
                 className={`relative px-2 py-1 rounded-md transition-all duration-200
                   ${
                     isActive
-                      ? "text-[#27CBCB]"
-                      : "text-gray-400 hover:text-[#27CBCB]"
+                      ? "text-[#8B5CF6]"
+                      : "text-gray-400 hover:text-[#8B5CF6]"
                   }
                 `}
               >
                 /{item}
                 <span
-                  className={`absolute left-0 -bottom-1 h-0.5 bg-[#27CBCB]
+                  className={`absolute left-0 -bottom-1 h-0.5 bg-[#8B5CF6]
                     transition-all duration-300
                     ${isActive ? "w-full" : "w-0"}
                   `}
@@ -121,7 +121,7 @@ const Navbar = () => {
           })}
         </div>
         <button
-          className="md:hidden text-gray-400 hover:text-[#27CBCB] transition-colors p-2"
+          className="md:hidden text-gray-400 hover:text-[#8B5CF6] transition-colors p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -154,20 +154,20 @@ const Navbar = () => {
                 className={`text-2xl font-mono transition-all duration-300
                   ${
                     isActive
-                      ? "text-[#27CBCB] scale-110"
-                      : "text-gray-400 hover:text-[#27CBCB] hover:scale-105"
+                      ? "text-[#8B5CF6] scale-110"
+                      : "text-gray-400 hover:text-[#8B5CF6] hover:scale-105"
                   }
                 `}
               >
                 /{item}
                 {isActive && (
-                  <span className="block mt-1 mx-auto w-1/2 h-0.5 bg-[#27CBCB] rounded-full"></span>
+                  <span className="block mt-1 mx-auto w-1/2 h-0.5 bg-[#8B5CF6] rounded-full"></span>
                 )}
               </a>
             );
           })}
           <button
-            className="mt-12 text-gray-400 hover:text-[#27CBCB] transition-colors text-lg"
+            className="mt-12 text-gray-400 hover:text-[#8B5CF6] transition-colors text-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             Close Menu

@@ -60,6 +60,7 @@ const About = () => {
             enableTilt
             enableMobileTilt={false}
             location="India"
+            linkedinUrl="https://www.linkedin.com/in/aditya-kumar-94b65b315"
           />
         </motion.div>
         <motion.div
@@ -74,16 +75,16 @@ const About = () => {
             className="text-3xl sm:text-4xl font-semibold leading-tight text-center lg:text-left"
           >
             A developer driven by{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#27CBCB] to-[#26D868]">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-[#8B5CF6] to-[#3B82F6]">
               real-world impact
             </span>
           </motion.h2>
           <motion.div variants={fadeUp} className="relative pl-6">
-            <div className="absolute left-0 top-2 w-1 h-20 bg-linear-to-b from-[#27CBCB] to-[#26D868] rounded-full" />
+            <div className="absolute left-0 top-2 w-1 h-20 bg-linear-to-b from-[#8B5CF6] to-[#3B82F6] rounded-full" />
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
               Final year Computer Science student at Vivekananda Global University with a solid foundation in
               software development, committed to creating{" "}
-              <span className="text-[#27CBCB]">scalable and reliable</span>{" "}
+              <span className="text-[#8B5CF6]">scalable and reliable</span>{" "}
               full-stack applications.
             </p>
           </motion.div>
@@ -91,7 +92,7 @@ const About = () => {
             variants={fadeUp}
             className="bg-linear-to-br from-gray-900/50 to-transparent p-4 sm:p-5 rounded-xl border border-gray-800/50"
           >
-            <p className="text-[#80978F] text-sm sm:text-base leading-relaxed italic">
+            <p className="text-[#94A3B8] text-sm sm:text-base leading-relaxed italic">
               &quot;My focus is on creating responsive user interfaces and reliable backend systems that provide practical solutions to everyday problems. Through my internship and projects, I&apos;ve learned to take ideas from concept to{" "}
               <span className="text-gray-300">production-ready applications</span>.&quot;
             </p>
@@ -103,7 +104,7 @@ const About = () => {
             viewport={{ once: true, amount: 0.4 }}
             className="space-y-3"
           >
-            <motion.h3 variants={fadeUp} className="text-lg text-[#80978F] text-center lg:text-left">
+            <motion.h3 variants={fadeUp} className="text-lg text-[#94A3B8] text-center lg:text-left">
               Interests
             </motion.h3>
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
@@ -119,7 +120,7 @@ const About = () => {
                   transition={{ delay: i * 0.05 }}
                   className="flex items-center"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#27CBCB] mr-2" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6] mr-2" />
                   <span className="text-xs sm:text-sm text-gray-400">{item}</span>
                 </motion.div>
               ))}
@@ -130,7 +131,7 @@ const About = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => setShowResume(true)}
-            className="cursor-pointer group w-full border border-gray-700 px-6 py-3 rounded-lg hover:border-[#27CBCB] hover:text-[#27CBCB] transition-all"
+            className="cursor-pointer group w-full border border-gray-700 px-6 py-3 rounded-lg hover:border-[#8B5CF6] hover:text-[#8B5CF6] transition-all"
           >
             <span className="flex justify-center items-center gap-2">
               View Full Resume
@@ -158,7 +159,7 @@ const About = () => {
               className="bg-[#101318] rounded-2xl w-full max-w-6xl h-[90vh] border border-gray-800 overflow-hidden"
             >
               <div className="flex justify-between items-center p-4 sm:p-6 border-b border-gray-800">
-                <h3 className="text-xl sm:text-2xl font-bold text-[#27CBCB]">Resume</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#8B5CF6]">Resume</h3>
                 <div className="flex gap-2 sm:gap-3">
                   <a
                     href="/Resume.pdf"
@@ -170,7 +171,7 @@ const About = () => {
                   </a>
                   <button
                     onClick={handleDownload}
-                    className="p-2 sm:px-4 sm:py-2 bg-linear-to-r from-[#27CBCB] to-[#26D868] rounded-lg cursor-pointer"
+                    className="p-2 sm:px-4 sm:py-2 bg-linear-to-r from-[#8B5CF6] to-[#3B82F6] rounded-lg cursor-pointer"
                   >
                     <Download size={18} />
                   </button>

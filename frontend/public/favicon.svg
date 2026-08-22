@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    
+    <!-- Text Gradient (Neon Cyan/Blue Glow) -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Square Background -->
+  <rect width="100" height="100" rx="24" fill="url(#bgGrad)" />
+  
+  <!-- <AK/> Text -->
+  <text 
+    x="50" 
+    y="54" 
+    font-family="'Courier New', Courier, monospace" 
+    font-size="32" 
+    font-weight="bold" 
+    fill="url(#textGrad)" 
+    text-anchor="middle" 
+    dominant-baseline="middle" 
+    letter-spacing="-1"
+  >
+    &lt;AK/&gt;
+  </text>
+</svg>

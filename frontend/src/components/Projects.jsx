@@ -31,7 +31,7 @@ const projects = [
     github: "https://github.com/assistaditya027",
     live: "https://clovo-psi.vercel.app/",
     image: clovoImg,
-    accent: "from-[#27CBCB]/40",
+    accent: "from-[#8B5CF6]/40",
   },
   {
     title: "HostelLink",
@@ -103,7 +103,7 @@ const ProjectCard = ({ project }) => {
         />
         <div className="absolute bottom-3 left-4">
           <h3 className="text-base sm:text-lg font-semibold text-white">{project.title}</h3>
-          <p className="text-xs text-[#27CBCB]">{project.subtitle}</p>
+          <p className="text-xs text-[#8B5CF6]">{project.subtitle}</p>
         </div>
       </div>
 
@@ -134,7 +134,7 @@ const ProjectCard = ({ project }) => {
           {project.tech.length > 4 && (
             <button
               onClick={() => setExpanded(!expanded)}
-              className="px-2 py-1 text-xs rounded-md border border-gray-700/40 text-[#27CBCB] hover:bg-[#27CBCB]/10 transition-colors"
+              className="px-2 py-1 text-xs rounded-md border border-gray-700/40 text-[#8B5CF6] hover:bg-[#8B5CF6]/10 transition-colors"
             >
               {expanded ? "− less" : `+${project.tech.length - 4}`}
             </button>
@@ -176,10 +176,10 @@ const Projects = () => {
       className="px-4 sm:px-6 md:px-8 lg:ml-65 lg:p-5 space-y-6 sm:space-y-8 max-w-6xl lg:mr-36 mx-auto"
     >
       <div>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#27CBCB] text-center lg:text-left">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#8B5CF6] text-center lg:text-left">
           Things I&apos;ve Built
         </h2>
-        <p className="mt-2 text-[#80978F] text-base sm:text-lg max-w-xl text-center lg:text-left mx-auto lg:mx-0">
+        <p className="mt-2 text-[#94A3B8] text-base sm:text-lg max-w-xl text-center lg:text-left mx-auto lg:mx-0">
           Real-world projects focused on system design, scalability, and clean engineering.
         </p>
       </div>
@@ -199,7 +199,7 @@ const Projects = () => {
         ))}
       </motion.div>
 
-      <div className="flex justify-center text-[#27CBCB]">
+      <div className="flex justify-center text-[#8B5CF6]">
         <a
           href="https://github.com/assistaditya027"
           target="_blank"
@@ -208,7 +208,7 @@ const Projects = () => {
         >
           <span className="relative">
             View all projects on GitHub
-            <span className="absolute left-1/2 -bottom-1 h-0.5 w-0 bg-[#27CBCB] transition-all duration-300 group-hover:w-full group-hover:left-0" />
+            <span className="absolute left-1/2 -bottom-1 h-0.5 w-0 bg-[#8B5CF6] transition-all duration-300 group-hover:w-full group-hover:left-0" />
           </span>
           <ExternalLink
             size={16}

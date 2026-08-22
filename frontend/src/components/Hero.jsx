@@ -20,14 +20,14 @@ const Hero = () => {
       className="pt-20 px-4 md:px-6 lg:ml-60 lg:p-5 flex flex-col mt-20 md:mt-20 space-y-4 md:space-y-6 relative"
     >
       <p className="text-sm md:text-base lg:text-lg text-gray-400 font-mono">
-        <span className="text-[#27CBCB]">const</span> developer ={" "}
+        <span className="text-[#8B5CF6]">const</span> developer ={" "}
         <span className="text-gray-300">&quot;Aditya Kumar&quot;</span>
         ;
       </p>
       <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
         Full-Stack Developer
       </h2>
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#80978F] leading-tight">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#94A3B8] leading-tight">
         <TextType
           text={[
             "Building responsive user experiences.",
@@ -43,14 +43,14 @@ const Hero = () => {
           cursorCharacter="|"
         />
       </h2>
-      <p className="text-[#80978F] text-base md:text-lg lg:text-xl mt-2 lg:mt-3 w-full lg:w-[60%]">
+      <p className="text-[#94A3B8] text-base md:text-lg lg:text-xl mt-2 lg:mt-3 w-full lg:w-[60%]">
         I am a Full Stack Developer with hands-on experience building real-world web applications. 
         I focus on connecting intuitive frontends with reliable backend systems to solve real application needs.
       </p>
       <div className="flex flex-col sm:flex-row justify-start items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-5 mt-3">
         <button
           onClick={() => scrollToSection("projects")}
-          className="bg-[#26D868] px-5 py-3 sm:px-7 sm:py-3 text-gray-800 font-semibold rounded-sm
+          className="bg-[#3B82F6] px-5 py-3 sm:px-7 sm:py-3 text-gray-800 font-semibold rounded-sm
       cursor-pointer hover:scale-105 transition-transform duration-200 w-full sm:w-auto text-center"
         >
           View Projects <span className="font-extrabold text-lg">→</span>
@@ -68,9 +68,9 @@ const Hero = () => {
       </div>
       <div className="hidden md:block absolute right-10 md:right-20 lg:right-40 bottom-20 md:bottom-32 lg:bottom-40">
         <div className="flex space-x-3 opacity-20">
-          <div className="w-2 h-8 bg-[#27CBCB] rounded-full animate-pulse"></div>
-          <div className="w-2 h-12 bg-[#26D868] rounded-full animate-pulse delay-100"></div>
-          <div className="w-2 h-6 bg-[#80978F] rounded-full animate-pulse delay-200"></div>
+          <div className="w-2 h-8 bg-[#8B5CF6] rounded-full animate-pulse"></div>
+          <div className="w-2 h-12 bg-[#3B82F6] rounded-full animate-pulse delay-100"></div>
+          <div className="w-2 h-6 bg-[#94A3B8] rounded-full animate-pulse delay-200"></div>
         </div>
       </div>
       <div className="hidden lg:block absolute left-40 bottom-20 opacity-10">
@@ -90,9 +90,9 @@ const Hero = () => {
       </div>
       <div className="hidden sm:block absolute right-4 md:right-6 lg:right-10 top-1/3 opacity-20">
         <div className="grid grid-cols-2 gap-2">
-          <div className="w-2 h-2 md:w-3 md:h-3 bg-[#27CBCB] rounded-sm"></div>
-          <div className="w-2 h-2 md:w-3 md:h-3 bg-[#26D868] rounded-sm"></div>
-          <div className="w-2 h-2 md:w-3 md:h-3 bg-[#80978F] rounded-sm"></div>
+          <div className="w-2 h-2 md:w-3 md:h-3 bg-[#8B5CF6] rounded-sm"></div>
+          <div className="w-2 h-2 md:w-3 md:h-3 bg-[#3B82F6] rounded-sm"></div>
+          <div className="w-2 h-2 md:w-3 md:h-3 bg-[#94A3B8] rounded-sm"></div>
           <div className="w-2 h-2 md:w-3 md:h-3 bg-yellow-400 rounded-sm"></div>
         </div>
       </div>
@@ -105,7 +105,7 @@ const Hero = () => {
           </div>
         </div>
         <p className="text-black text-xs italic font-medium leading-relaxed">
-          Design with intent. Develop with discipline.
+          Code with purpose. Build for scale.
         </p>
         <div className="mt-4 flex items-center">
           <div className="w-8 h-px bg-yellow-600 mr-3"></div>
