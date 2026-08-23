@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 dotenv.config();
 
@@ -28,17 +28,23 @@ app.use(cors({
 
 app.use(express.json());
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+});
 
 app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
-    await resend.emails.send({
-      from: "Portfolio Contact <Portfolio@resend.dev>",
-      to: "aditya123fx@gmail.com",
+    await transporter.sendMail({
+      from: `"${name}" <${process.env.EMAIL_USER}>`,
+      to: process.env.EMAIL_USER,
       subject: `New Contact Message from ${name}`,
-      reply_to: email,
+      replyTo: email,
       html: `
         <h2>New Portfolio Message</h2>
         <p><strong>Name:</strong> ${name}</p>
