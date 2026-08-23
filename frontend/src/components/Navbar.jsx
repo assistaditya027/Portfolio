@@ -137,62 +137,52 @@ const Navbar = () => {
         </button>
       </nav>
       <div
-        className={`fixed inset-0 z-40 bg-[#0a0d14]/98 backdrop-blur-xl
-          transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden flex flex-col justify-center
+        className={`fixed inset-0 z-40 bg-[#101318]/95 backdrop-blur-xl
+          transition-all duration-300 ease-out md:hidden flex flex-col items-center justify-center
           ${mobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}
         `}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.15),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.1),transparent_70%)]" />
         
-        <div className="flex flex-col items-start px-8 sm:px-12 space-y-8 z-10 w-full">
-          {sections.map((item, index) => {
+        <div className="flex flex-col items-center space-y-8 z-10 w-full mt-10">
+          {sections.map((item) => {
             const isActive = active === item;
             return (
               <a
                 key={item}
                 href={`#${item}`}
                 onClick={(e) => scrollToSection(item, e)}
-                className={`group flex items-end gap-4 w-full transition-all duration-300
+                className={`relative text-3xl font-bold capitalize transition-all duration-300
                   ${
                     isActive
-                      ? "translate-x-2"
-                      : "hover:translate-x-2"
+                      ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400 scale-110"
+                      : "text-gray-300 hover:text-white hover:scale-105"
                   }
                 `}
               >
-                <span className={`text-sm sm:text-base font-mono mb-2 transition-colors duration-300
-                  ${isActive ? "text-[#8B5CF6]" : "text-gray-500 group-hover:text-[#8B5CF6]"}
-                `}>
-                  0{index + 1}.
-                </span>
-                <span className={`text-5xl sm:text-6xl font-bold capitalize tracking-tight transition-all duration-300
-                  ${
-                    isActive
-                      ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400 drop-shadow-lg"
-                      : "text-gray-300 group-hover:text-white"
-                  }
-                `}>
-                  {item}
-                </span>
+                {item}
+                {isActive && (
+                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-[3px] bg-gradient-to-r from-violet-500 to-blue-500 rounded-full" />
+                )}
               </a>
             );
           })}
         </div>
         
-        <div className="absolute bottom-10 left-0 w-full px-8 sm:px-12 flex justify-between items-center z-10">
-          <div className="flex gap-6">
-            <a href="https://github.com/assistaditya027" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#8B5CF6] transition-colors">
+        <div className="absolute bottom-12 flex flex-col items-center gap-6 z-10">
+          <div className="flex gap-8">
+            <a href="https://github.com/assistaditya027" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#8B5CF6] transition-colors text-sm font-semibold tracking-wider uppercase">
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/aditya-kumar-94b65b315" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+            <a href="https://www.linkedin.com/in/aditya-kumar-94b65b315" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#3B82F6] transition-colors text-sm font-semibold tracking-wider uppercase">
               LinkedIn
             </a>
           </div>
           <button
-            className="text-xs font-mono text-gray-500 hover:text-white transition-colors uppercase tracking-widest border-b border-gray-700 pb-1"
+            className="text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest border border-gray-700 hover:border-gray-500 px-6 py-2 rounded-full mt-4"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Close
+            Close Menu
           </button>
         </div>
       </div>
