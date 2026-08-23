@@ -137,40 +137,62 @@ const Navbar = () => {
         </button>
       </nav>
       <div
-        className={`fixed top-0 left-0 w-full h-screen z-40 bg-[#101318]/95 backdrop-blur-md
-          transition-all duration-300 ease-out md:hidden
+        className={`fixed inset-0 z-40 bg-[#0a0d14]/98 backdrop-blur-xl
+          transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden flex flex-col justify-center
           ${mobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}
         `}
       >
-        <div className="h-20"></div>
-        <div className="flex flex-col items-center justify-center h-[calc(100vh-5rem)] space-y-8">
-          {sections.map((item) => {
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.15),transparent_70%)]" />
+        
+        <div className="flex flex-col items-start px-8 sm:px-12 space-y-8 z-10 w-full">
+          {sections.map((item, index) => {
             const isActive = active === item;
             return (
               <a
                 key={item}
                 href={`#${item}`}
                 onClick={(e) => scrollToSection(item, e)}
-                className={`text-2xl font-semibold capitalize transition-all duration-300
+                className={`group flex items-end gap-4 w-full transition-all duration-300
                   ${
                     isActive
-                      ? "text-[#C084FC] scale-110 drop-shadow-[0_0_10px_rgba(192,132,252,0.5)]"
-                      : "text-gray-300 hover:text-[#C084FC] hover:scale-105"
+                      ? "translate-x-2"
+                      : "hover:translate-x-2"
                   }
                 `}
               >
-                {item}
-                {isActive && (
-                  <span className="block mt-1.5 mx-auto w-1/2 h-[2px] bg-[#C084FC] rounded-full"></span>
-                )}
+                <span className={`text-sm sm:text-base font-mono mb-2 transition-colors duration-300
+                  ${isActive ? "text-[#8B5CF6]" : "text-gray-500 group-hover:text-[#8B5CF6]"}
+                `}>
+                  0{index + 1}.
+                </span>
+                <span className={`text-5xl sm:text-6xl font-bold capitalize tracking-tight transition-all duration-300
+                  ${
+                    isActive
+                      ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400 drop-shadow-lg"
+                      : "text-gray-300 group-hover:text-white"
+                  }
+                `}>
+                  {item}
+                </span>
               </a>
             );
           })}
+        </div>
+        
+        <div className="absolute bottom-10 left-0 w-full px-8 sm:px-12 flex justify-between items-center z-10">
+          <div className="flex gap-6">
+            <a href="https://github.com/assistaditya027" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#8B5CF6] transition-colors">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/aditya-kumar-94b65b315" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+              LinkedIn
+            </a>
+          </div>
           <button
-            className="mt-12 text-gray-400 hover:text-[#8B5CF6] transition-colors text-lg"
+            className="text-xs font-mono text-gray-500 hover:text-white transition-colors uppercase tracking-widest border-b border-gray-700 pb-1"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Close Menu
+            Close
           </button>
         </div>
       </div>
