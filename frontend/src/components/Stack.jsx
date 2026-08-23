@@ -61,18 +61,18 @@ const Stack = () => {
   const [active, setActive] = useState("all");
 
   const Capsule = ({ tech }) => (
-    <motion.div
-      whileHover={{ y: -5, scale: 1.02 }}
+    <div
       className="group flex items-center justify-start gap-3 sm:gap-4 px-4 py-2.5 sm:py-3
         w-full rounded-xl sm:rounded-full border border-gray-700/40 hover:border-[#8B5CF6]/60
         bg-gray-900/40 hover:bg-gradient-to-r hover:from-[#8B5CF6]/10 hover:to-[#3B82F6]/10 
-        backdrop-blur transition-colors duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer"
+        backdrop-blur transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer
+        hover:-translate-y-1.5 hover:scale-[1.02]"
     >
-      <span className="text-xl sm:text-2xl text-gray-400 group-hover:text-[#3B82F6] transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1 flex-shrink-0">
+      <span className="text-xl sm:text-2xl text-gray-400 group-hover:text-[#3B82F6] transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1 flex-shrink-0">
         {tech.icon}
       </span>
       <span className="text-xs sm:text-sm font-semibold text-gray-200 group-hover:text-white transition-colors duration-300 truncate">{tech.name}</span>
-    </motion.div>
+    </div>
   );
 
   return (
@@ -174,14 +174,13 @@ const Stack = () => {
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 w-full">
             {others.map((tech) => (
-              <motion.div
+              <div
                 key={tech.name}
-                whileHover={{ y: -2 }}
-                className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-gray-700/40 bg-gray-900/30 backdrop-blur"
+                className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-gray-700/40 bg-gray-900/30 backdrop-blur cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:border-gray-500/50 hover:bg-gray-800/40"
               >
-                <span className="text-lg text-gray-400">{tech.icon}</span>
+                <span className="text-lg text-gray-400 transition-colors duration-300 hover:text-white">{tech.icon}</span>
                 <span className="text-xs sm:text-sm text-gray-300 font-medium truncate">{tech.name}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
