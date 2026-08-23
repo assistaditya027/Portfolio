@@ -63,15 +63,15 @@ const Stack = () => {
   const Capsule = ({ tech }) => (
     <motion.div
       whileHover={{ y: -5, scale: 1.02 }}
-      className="group flex items-center gap-3 px-4 sm:px-5 py-3
+      className="group flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 sm:py-3
         rounded-full border border-gray-700/40 hover:border-[#8B5CF6]/60
         bg-gray-900/40 hover:bg-gradient-to-r hover:from-[#8B5CF6]/10 hover:to-[#3B82F6]/10 
         backdrop-blur transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer"
     >
-      <span className="text-xl text-gray-400 group-hover:text-[#3B82F6] transition-colors duration-300">
+      <span className="text-lg sm:text-xl text-gray-400 group-hover:text-[#3B82F6] transition-colors duration-300">
         {tech.icon}
       </span>
-      <span className="text-sm sm:text-md font-medium text-gray-200 group-hover:text-white transition-colors duration-300">{tech.name}</span>
+      <span className="text-xs sm:text-sm font-medium text-gray-200 group-hover:text-white transition-colors duration-300">{tech.name}</span>
     </motion.div>
   );
 
@@ -90,7 +90,7 @@ const Stack = () => {
             The technologies I reach for most often - each chosen with purpose
           </p>
         </div>
-        <div className="w-full lg:w-60 bg-gray-900/40 backdrop-blur-sm py-4 px-5 mr-35 rounded-xl border border-gray-700/40">
+        <div className="w-full lg:w-60 bg-gray-900/40 backdrop-blur-sm py-4 px-5 lg:mr-35 rounded-xl border border-gray-700/40">
           <p className="text-gray-200 text-sm italic leading-relaxed mb-3">
             &quot;First, solve the problem. Then, write the code.&quot;
           </p>
@@ -109,7 +109,7 @@ const Stack = () => {
           <button
             key={key}
             onClick={() => setActive(key)}
-            className={`relative px-3 sm:px-4 py-2 text-sm sm:text-md font-medium rounded-lg transition-all
+            className={`relative px-2.5 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-lg transition-all
               ${
                 active === key
                   ? "text-white bg-[#8B5CF6]/20"
