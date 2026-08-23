@@ -73,7 +73,7 @@ const Contact = () => {
     <section className="relative px-4 sm:px-6 md:px-8 mx-auto py-20 max-w-6xl">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.15),transparent_50%)]" />
 
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
         <motion.div variants={fade} initial="hidden" whileInView="show">
           <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">
             Let’s work together
@@ -121,7 +121,7 @@ const Contact = () => {
           initial="hidden"
           whileInView="show"
           onSubmit={handleSubmit}
-          className="p-8 rounded-3xl border border-gray-800 bg-linear-to-b from-gray-900/60 to-gray-900/30 backdrop-blur-xl space-y-5"
+          className="p-5 sm:p-8 rounded-3xl border border-gray-800 bg-linear-to-b from-gray-900/60 to-gray-900/30 backdrop-blur-xl space-y-5"
         >
           <h3 className="text-2xl font-semibold text-gray-200">
             Send a Message

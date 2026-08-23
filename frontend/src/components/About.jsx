@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProfileCard from "./ui/ProfileCard";
-import profileImg from "../assets/profile.png";
+import profileImg from "../assets/profiles.png";
 import profile from "../assets/passport_size.jpeg";
 import { X, Download, ExternalLink } from "lucide-react";
 

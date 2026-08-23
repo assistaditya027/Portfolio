@@ -24,10 +24,10 @@ const Hero = () => {
         <span className="text-gray-300">&quot;Aditya Kumar&quot;</span>
         ;
       </p>
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
+      <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight">
         Full-Stack Developer
       </h2>
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#94A3B8] leading-tight">
+      <h2 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-[#94A3B8] leading-tight">
         <TextType
           text={[
             "Building modern web apps.",
