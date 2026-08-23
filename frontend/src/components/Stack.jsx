@@ -66,9 +66,9 @@ const Stack = () => {
       className="group flex items-center justify-start gap-3 sm:gap-4 px-4 py-2.5 sm:py-3
         w-full rounded-xl sm:rounded-full border border-gray-700/40 hover:border-[#8B5CF6]/60
         bg-gray-900/40 hover:bg-gradient-to-r hover:from-[#8B5CF6]/10 hover:to-[#3B82F6]/10 
-        backdrop-blur transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer"
+        backdrop-blur transition-colors duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.2)] cursor-pointer"
     >
-      <span className="text-xl sm:text-2xl text-gray-400 group-hover:text-[#3B82F6] transition-colors duration-300 flex-shrink-0">
+      <span className="text-xl sm:text-2xl text-gray-400 group-hover:text-[#3B82F6] transition-transform duration-300 group-hover:scale-110 group-hover:-translate-y-1 flex-shrink-0">
         {tech.icon}
       </span>
       <span className="text-xs sm:text-sm font-semibold text-gray-200 group-hover:text-white transition-colors duration-300 truncate">{tech.name}</span>
