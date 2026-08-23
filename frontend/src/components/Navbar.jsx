@@ -1,4 +1,7 @@
 import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { X } from "lucide-react";
 
 const sections = ["about", "stack", "projects", "contact"];
 
@@ -136,56 +139,71 @@ const Navbar = () => {
           )}
         </button>
       </nav>
-      <div
-        className={`fixed inset-0 z-40 bg-[#101318]/95 backdrop-blur-xl
-          transition-all duration-300 ease-out md:hidden flex flex-col items-center justify-center
-          ${mobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}
-        `}
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.1),transparent_70%)]" />
-        
-        <div className="flex flex-col items-center space-y-8 z-10 w-full mt-10">
-          {sections.map((item) => {
-            const isActive = active === item;
-            return (
-              <a
-                key={item}
-                href={`#${item}`}
-                onClick={(e) => scrollToSection(item, e)}
-                className={`relative text-3xl font-bold capitalize transition-all duration-300
-                  ${
-                    isActive
-                      ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400 scale-110"
-                      : "text-gray-300 hover:text-white hover:scale-105"
-                  }
-                `}
-              >
-                {item}
-                {isActive && (
-                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-[3px] bg-gradient-to-r from-violet-500 to-blue-500 rounded-full" />
-                )}
-              </a>
-            );
-          })}
-        </div>
-        
-        <div className="absolute bottom-12 flex flex-col items-center gap-6 z-10">
-          <div className="flex gap-8">
-            <a href="https://github.com/assistaditya027" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#8B5CF6] transition-colors text-sm font-semibold tracking-wider uppercase">
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/aditya-kumar-94b65b315" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#3B82F6] transition-colors text-sm font-semibold tracking-wider uppercase">
-              LinkedIn
-            </a>
-          </div>
-          <button
-            className="text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest border border-gray-700 hover:border-gray-500 px-6 py-2 rounded-full mt-4"
-            onClick={() => setMobileMenuOpen(false)}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(24px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-[#101318]/95 md:hidden flex flex-col items-center justify-center"
           >
-            Close Menu
-          </button>
-        </div>
-      </div>
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,92,246,0.1),transparent_70%)]" />
+            
+            <div className="flex flex-col items-center space-y-8 z-10 w-full mt-10">
+              {sections.map((item, i) => {
+                const isActive = active === item;
+                return (
+                  <motion.a
+                    key={item}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    transition={{ delay: i * 0.1, duration: 0.4, type: "spring", stiffness: 100 }}
+                    href={`#${item}`}
+                    onClick={(e) => scrollToSection(item, e)}
+                    className={`relative text-4xl sm:text-5xl font-bold capitalize transition-all duration-300
+                      ${
+                        isActive
+                          ? "text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400 scale-110"
+                          : "text-gray-300 hover:text-white hover:scale-105"
+                      }
+                    `}
+                  >
+                    {item}
+                    {isActive && (
+                      <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-1/2 h-[3px] bg-gradient-to-r from-violet-500 to-blue-500 rounded-full shadow-[0_0_10px_rgba(139,92,246,0.5)]" />
+                    )}
+                  </motion.a>
+                );
+              })}
+            </div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ delay: 0.4, duration: 0.3 }}
+              className="absolute bottom-12 flex flex-col items-center gap-6 z-10"
+            >
+              <div className="flex gap-8">
+                <a href="https://github.com/assistaditya027" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white hover:-translate-y-1 transition-all p-3 rounded-full bg-gray-800/40 border border-gray-700/50 shadow-lg">
+                  <FaGithub size={24} />
+                </a>
+                <a href="https://www.linkedin.com/in/aditya-kumar-94b65b315" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#3B82F6] hover:-translate-y-1 transition-all p-3 rounded-full bg-gray-800/40 border border-gray-700/50 shadow-lg">
+                  <FaLinkedin size={24} />
+                </a>
+              </div>
+              <button
+                className="text-gray-400 hover:text-white hover:bg-gray-800 hover:rotate-90 transition-all duration-300 p-3 rounded-full mt-2 bg-gray-900/50 border border-gray-800 shadow-lg cursor-pointer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <X size={28} />
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
