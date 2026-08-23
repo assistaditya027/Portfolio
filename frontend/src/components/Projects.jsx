@@ -97,14 +97,23 @@ const ProjectCard = ({ project }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="h-full w-full object-cover scale-105 blur-[2px] group-hover:blur-0 group-hover:scale-100 transition-all duration-500"
+          className="h-full w-full object-cover scale-100 lg:scale-105 blur-0 lg:blur-[2px] lg:group-hover:blur-0 lg:group-hover:scale-100 transition-all duration-500"
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
+        
+        {/* Mobile Continuous Gradient */}
+        <motion.div
+          animate={{ x: ["-100%", "100%"] }}
+          transition={{ duration: 4, repeat: Infinity, repeatType: "loop", ease: "linear" }}
+          className={`lg:hidden absolute inset-0 bg-gradient-to-r ${project.accent} to-transparent opacity-50 mix-blend-overlay`}
+        />
+        
+        {/* Desktop Hover Gradient */}
         <motion.div
           initial={{ x: "-60%" }}
           whileHover={{ x: "60%" }}
           transition={{ duration: 1.2 }}
-          className={`absolute inset-0 bg-gradient-to-r ${project.accent} to-transparent opacity-90 mix-blend-overlay`}
+          className={`hidden lg:block absolute inset-0 bg-gradient-to-r ${project.accent} to-transparent opacity-90 mix-blend-overlay`}
         />
         <div className="absolute bottom-3 left-4">
           <h3 className="text-lg sm:text-xl font-bold text-white drop-shadow-md">{project.title}</h3>
@@ -139,30 +148,30 @@ const ProjectCard = ({ project }) => {
           {project.tech.length > 4 && (
             <button
               onClick={() => setExpanded(!expanded)}
-              className="px-2.5 py-1 text-[11px] sm:text-xs font-bold rounded-md bg-[#C084FC]/20 border border-[#C084FC]/40 text-[#E9D5FF] hover:bg-[#C084FC]/30 transition-colors shadow-sm cursor-pointer"
+              className="px-3 py-1.5 text-[11px] sm:text-xs font-bold rounded-md bg-[#C084FC]/20 border border-[#C084FC]/40 text-[#E9D5FF] hover:bg-[#C084FC]/30 transition-colors shadow-sm cursor-pointer"
             >
-              {expanded ? "− less" : `+${project.tech.length - 4}`}
+              {expanded ? "− less" : `+${project.tech.length - 4} more`}
             </button>
           )}
         </div>
 
-        <div className="flex gap-4 text-gray-400 pt-2">
+        <div className="flex gap-2 text-gray-400 pt-2 -ml-2">
           <a
             href={project.github}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-white transition-colors"
+            className="hover:text-white transition-colors p-2"
           >
-            <FaGithub size={16} />
+            <FaGithub className="w-5 h-5 sm:w-4 sm:h-4" />
           </a>
           {project.live && (
             <a
               href={project.live}
               target="_blank"
               rel="noreferrer"
-              className="hover:text-white transition-colors"
+              className="hover:text-white transition-colors p-2"
             >
-              <ExternalLink size={16} />
+              <ExternalLink className="w-5 h-5 sm:w-4 sm:h-4" />
             </a>
           )}
         </div>
