@@ -75,7 +75,7 @@ const Contact = () => {
 
       <div className="grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
         <motion.div variants={fade} initial="hidden" whileInView="show">
-          <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">
             Let’s work together
           </h2>
 
@@ -87,6 +87,7 @@ const Contact = () => {
           <div className="mt-10 space-y-4">
             <motion.a
               whileHover={{ x: 6, scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
               href="https://github.com/assistaditya027"
               target="_blank"
               className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm hover:border-violet-500/50 hover:bg-violet-500/10 transition-all shadow-lg"
@@ -101,6 +102,7 @@ const Contact = () => {
 
             <motion.a
               whileHover={{ x: 6, scale: 1.02 }}
+              whileTap={{ scale: 0.95 }}
               href="https://www.linkedin.com/in/aditya-kumar-94b65b315"
               target="_blank"
               className="flex items-center gap-4 p-4 rounded-xl border border-gray-800 bg-gray-900/40 backdrop-blur-sm hover:border-blue-500/50 hover:bg-blue-500/10 transition-all shadow-lg"
@@ -121,7 +123,7 @@ const Contact = () => {
           initial="hidden"
           whileInView="show"
           onSubmit={handleSubmit}
-          className="p-5 sm:p-8 rounded-3xl border border-gray-800 bg-linear-to-b from-gray-900/60 to-gray-900/30 backdrop-blur-xl space-y-5"
+          className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-gray-800 bg-linear-to-b from-gray-900/60 to-gray-900/30 backdrop-blur-xl space-y-5"
         >
           <h3 className="text-2xl font-semibold text-gray-200">
             Send a Message
