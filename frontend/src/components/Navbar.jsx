@@ -184,7 +184,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
               transition={{ delay: 0.4, duration: 0.3 }}
-              className="absolute bottom-12 flex flex-col items-center gap-6 z-10"
+              className="flex flex-col items-center gap-6 z-10 mt-16 pb-8"
             >
               <div className="flex gap-8">
                 <a href="https://github.com/assistaditya027" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white hover:-translate-y-1 transition-all p-3 rounded-full bg-gray-800/40 border border-gray-700/50 shadow-lg">
